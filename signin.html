@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In - Rescue.AI</title>
+  <link rel="stylesheet" href="signin.css" />
+</head>
+<body>
+  <div class="signin-container">
+    <section class="promo-section">
+      <div class="logo">Sagar<span class="accent">Suraksha</span></div>
+      <h2>Welcome Back!</h2>
+      <p>Enter your credentials to access your account and stay updated with disaster alerts.</p>
+    </section>
+    <section class="form-section">
+      <form class="signin-form">
+        <h3>Sign In</h3>
+        <div class="social-btns">
+          <button type="button" class="social-btn google">Google</button>
+          <button type="button" class="social-btn github">Github</button>
+        </div>
+        <div class="or">or</div>
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit" class="sign-in-btn">Sign In</button>
+        <p class="register-link">Don't have an account? <a href="register.html">Sign Up</a></p>
+      </form>
+    </section>
+  </div>
+  <script>
+  document.querySelector('.signin-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    // You can add validation/auth backend logic here if needed
+
+    // Redirect to home page after form submission
+    window.location.href = 'index.html';  // Adjust to your home page filename
+  });
+</script>
+
+</body>
+</html>

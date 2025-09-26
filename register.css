@@ -1,0 +1,145 @@
+body, html {
+  margin: 0; padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f6f8fa;
+  color: #222;
+  min-height: 100vh;
+}
+.register-container {
+  display: flex; min-height: 100vh;
+  justify-content: center; align-items: center; padding: 0;
+  background: #f6f8fa;
+}
+.progress-section {
+  flex: 1;
+  background: white;
+  border-radius: 27px 0 0 27px;
+  box-shadow: 0 2px 28px rgba(239,68,68,0.10);
+  padding: 60px 38px 60px 54px;
+  display: flex; flex-direction: column; align-items: start;
+  min-width: 350px; max-width: 420px;
+}
+.logo {
+  font-size: 2rem; font-weight: 700;
+  margin-bottom: 46px;
+}
+.accent { color: #ef4444; }
+.progress-section h2 {
+  margin: 12px 0 8px 0; font-size: 1.5rem; font-weight: 700;
+}
+.progress-section .desc {
+  color: #707070;
+  margin-bottom: 26px;
+  font-weight: 400;
+}
+.stepbar { width: 100%; margin-top: 30px; }
+.step {
+  background: #ffeaea;
+  color: #c30000;
+  border-radius: 10px;
+  margin-bottom: 13px;
+  padding: 13px 18px;
+  font-weight: 600; display: flex; align-items: center; gap: 15px;
+  font-size: 1.06rem;
+  opacity: .75;
+}
+.step.active {
+  background: #ef4444; color: #fff; opacity: 1;
+}
+.step span {
+  background: white; color: #ef4444;
+  display: inline-block; width: 29px; height: 29px; border-radius: 50%;
+  text-align: center; line-height: 29px; margin-right: 8px;
+  font-weight: 700; font-size: 1rem;
+  border: 2px solid #ef4444;
+}
+.step.active span {
+  color: #ef4444; background: #fff;
+  border: 2px solid #fff;
+}
+
+.form-section {
+  flex: 1.15; background: #fff;
+  border-radius: 0 27px 27px 0;
+  box-shadow: 0 2px 28px rgba(239,68,68,0.10);
+  padding: 60px 56px 60px 36px;
+  display: flex; align-items: center; justify-content: center;
+  min-width: 370px; max-width: 480px;
+}
+.signup-form {
+  display: flex; flex-direction: column; width: 100%; gap: 18px;
+}
+.signup-form h3 {
+  font-size: 1.4rem; font-weight: 700; margin-bottom: 0;
+}
+.desc2 { color: #888; font-size: 1rem; margin: 6px 0 20px 0; }
+.social-buttons {
+  display: flex; gap: 12px; margin-bottom: 3px;
+}
+.social-btn {
+  flex: 1; border: none;
+  background: #f7f7f7; color: #333;
+  font-size: 1rem; border-radius: 9px;
+  padding: 11px 0;
+  font-weight: 600; cursor: pointer; outline: none;
+  box-shadow: 0 1px 3px #eee;
+  transition: background .18s;
+}
+.social-btn.google:hover { background: #fbe4e4; }
+.social-btn.github:hover { background: #f6e9ff; }
+.or { text-align: center; color: #bdbdbd; letter-spacing: 2px; font-size: .94rem; margin-bottom: -12px; }
+.field-row {
+  display: flex; gap: 11px;
+}
+.field-row input {
+  flex: 1;
+}
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.6px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+  margin-bottom: 5px;
+  outline: none;
+  transition: border .18s;
+}
+.signup-form input:focus {
+  border-color: #ef4444;
+}
+.instructions {
+  font-size: 0.96rem;
+  color: #b16f60;
+  margin-bottom: 4px; margin-top: -14px;
+}
+.submit-btn {
+  margin-top: 7px;
+  background: #ef4444; color: white; font-weight: 700;
+  border-radius: 8px; border: none;
+  font-size: 1.07rem; padding: 15px;
+  cursor: pointer; box-shadow: 0 2px 12px #fdeaea;
+  transition: background 0.24s;
+}
+.submit-btn:hover { background: #b91c1c; }
+.signin-link {
+  text-align: center; color: #757575;
+  font-size: .97rem; margin-top: 7px;
+}
+.signin-link a {
+  color: #ef4444; text-decoration: none; font-weight: 600;
+}
+.signin-link a:hover { text-decoration: underline; }
+@media (max-width: 900px) {
+  .register-container {
+    flex-direction: column; align-items: stretch; min-height: unset;
+  }
+  .progress-section, .form-section {
+    min-width: unset; max-width: unset; width: 100%; border-radius: 0;
+    padding: 28px 7vw;
+  }
+  .progress-section { border-radius: 0 0 18px 18px; }
+  .form-section { border-radius: 18px 18px 0 0; }
+}

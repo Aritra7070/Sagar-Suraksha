@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sagar Suraksha- Emergency Alert System</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <link rel="stylesheet" href="alert.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Sagar<span style="color:#ef4444;">Suraksha</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="news.html">News</a>
+      <a href="alert.html" class="active">Alerts</a>
+      <a href="contact.html">Contact</a>
+   
+    </nav>
+    <div class="header-right">
+  <a href="signin.html" class="pill-btn">Sign in</a>
+  <a href="register.html" class="pill-btn">Register</a>
+</div>
+
+  </header>
+
+  <section class="hero">
+    <h1>Emergency Alert System</h1>
+    <p>Report and monitor emergencies in real-time. All alerts are shared with emergency response teams.</p>
+  </section>
+
+  <main>
+    <section class="card">
+      <h2>Report an Emergency Alert</h2>
+      <form id="alertForm">
+        <label for="locationInput">Location</label>
+        <input id="locationInput" name="location" type="text" placeholder="Enter affected location" required />
+
+        <label for="severitySelect">Severity Level</label>
+        <select id="severitySelect" name="severity" required>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+
+        <label for="detailsInput">Emergency Details</label>
+        <textarea id="detailsInput" name="details" placeholder="Describe the emergency situation in detail" required></textarea>
+
+        <button type="submit">Submit Alert</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Emergency Alerts Map</h2>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <button class="track-btn" onclick="trackLocation()">Track My Location</button>
+
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <script src="alert.js"></script>
+</body>
+<footer class="ss-footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="logo">Sagar<span style="color:#ef4444;">Suraksha</span></div>
+      <p class="footer-desc">
+        Disaster alerts and updates for coastal safety—stay informed, stay safe!
+      </p>
+      <div class="footer-social">
+        <a href="#"><img src="icon-instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="icon-facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="icon-twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="icon-youtube.svg" alt="YouTube"></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <a href="news.html">News</a>
+        <a href="alerts.html">Alerts</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Log in</a>
+      </div>
+    </div>
+    <div class="footer-signup">
+      <span>SIGN UP FOR ALERTS</span>
+      <p>Get first notifications for critical updates and safety information.</p>
+      <form class="signup-form">
+        <input type="email" placeholder="Email" required>
+        <button type="submit" class="pill-btn">Sign Me Up</button>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <span>© 2025 Coders 365</span>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="cookie.html">Cookie Policy</a>
+    <span>kolkata, India</span>
+  </div>
+</footer>
+
+</html>
+
